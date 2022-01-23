@@ -23,6 +23,7 @@
   "dependencies": {
     "node-postgres": "^0.6.2",
     "nodemailer": "^6.7.2",
+    "nodemailer-smtp-transport": "^2.7.4",
     "pg": "^8.7.1"
   }
 }
