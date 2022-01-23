@@ -1,0 +1,21 @@
+{
+  "name": "LeafletImages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pg_connect": "node serverless/pg_connect.js",
+    "get_mapbox_token": "node serverless/get_mapbox_token.js",
+    "mailer": "node serverless/mailer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-postgres": "^0.6.2",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^8.13.0"
+  }
+}
