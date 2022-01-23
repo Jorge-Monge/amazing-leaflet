@@ -695,36 +695,17 @@ function populateMapBox_Map_Providers(mt) {
   console.log("Populating MapBox Providers");
   console.log("MAPBOX_TOKEN:", mt);
   mapBox_Map_Provider = {
-    url: "https://api.mapbox.com/styles/v1/${mapbox_style}/tiles/{z}/{x}/{y}?access_token=${mt}".replace(
-      "${mt}",
-      mt
-    ),
+    url: "https://api.mapbox.com/styles/v1/${mapbox_style}/tiles/{z}/{x}/{y}?access_token={accessToken}",
     options: {
       attribution:
         "© <a href='https://apps.mapbox.com/feedback/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
       tileSize: 512,
-      opacity: 1,
       zoomOffset: -1,
+      accessToken: mt,
     },
   }; // mapBox_Map_Provider ends
   console.log("mapBox_Map_Provider:", mapBox_Map_Provider);
   return mapBox_Map_Provider;
-}
-
-//
-// GET MAPBOX BASEMAP READY FOR INSERTION
-//
-
-function mapboxStyles(DOMid) {
-  // This function get DOM element's IDs regarding the Mapbox map styles, and return an
-  // object with the appropriate Mapbox tiles url and map options
-  return {
-    url: mapBox_Map_Provider.url.replace(
-      "${mapbox_style}",
-      mapbox_style.mb_streets
-    ),
-    options: mapBox_Map_Provider.options,
-  };
 }
 
 //
