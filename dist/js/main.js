@@ -673,13 +673,12 @@ function changeBaseMap(DOMClassList, basemap_id) {
       options: openStreet_Map_Provider.options,
     },
     Mapbox: {
-      url: mapBox_Map_Provider.url.replace(
-        "${mapbox_style}",
-        "carto/" + mapbox_style[basemap_id]
-      ),
+      url: mapBox_Map_Provider.url,
       options: mapBox_Map_Provider.options,
     },
   };
+
+  basemaps_dict.Mapbox.options.id = mapbox_style[basemap_id];
 
   // Returns an object, with keys: url && options
   return basemaps_dict[bm_provider];
@@ -695,12 +694,13 @@ function populateMapBox_Map_Providers(mt) {
   console.log("Populating MapBox Providers");
   console.log("MAPBOX_TOKEN:", mt);
   mapBox_Map_Provider = {
-    url: "https://api.mapbox.com/styles/v1/${mapbox_style}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+    url: "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
     options: {
       attribution:
         "© <a href='https://apps.mapbox.com/feedback/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
       tileSize: 512,
       zoomOffset: -1,
+      id: "mapbox/${mapbox_style}",
       accessToken: mt,
     },
   }; // mapBox_Map_Provider ends
