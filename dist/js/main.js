@@ -707,6 +707,7 @@ function populateMapBox_Map_Providers(mt) {
       zoomOffset: -1,
     },
   }; // mapBox_Map_Provider ends
+  console.log("mapBox_Map_Provider:", mapBox_Map_Provider);
   return mapBox_Map_Provider;
 }
 
