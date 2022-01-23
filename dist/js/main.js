@@ -733,7 +733,7 @@ function createTileLayer(map_provider, options) {
   // plus the appropriate options for the Leaflet.tileLayer object
   // and returns a Leaflet.tileLayer object that can then
   // be added to the Leaflet map
-
+  console.log("map_provider:", map_provider);
   return L.tileLayer(map_provider, options);
 }
 
