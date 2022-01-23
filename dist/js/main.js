@@ -678,7 +678,7 @@ function changeBaseMap(DOMClassList, basemap_id) {
     },
   };
 
-  basemaps_dict.Mapbox.options.id = mapbox_style[basemap_id];
+  basemaps_dict.Mapbox.options.id = "mapbox/" + mapbox_style[basemap_id];
 
   // Returns an object, with keys: url && options
   return basemaps_dict[bm_provider];
