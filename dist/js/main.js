@@ -347,6 +347,8 @@ function initMap() {
         );
         // And redraw the basemap
         draw_basemap(new_basemap.url, new_basemap.options);
+        console.log("new_basemap.url:", new_basemap.url);
+        console.log("new_basemap.options", new_basemap.options);
         // And change the style of the button
         // corresponding to the option selected
         document
