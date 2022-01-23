@@ -379,11 +379,11 @@ function initMap() {
   // DRAW THE BASEMAP WHEN THE PAGE LOADS
   //
   // openStreet map as startup map
-  //draw_basemap(openStreet_Map_Provider.url, openStreet_Map_Provider.options);
+  draw_basemap(openStreet_Map_Provider.url, openStreet_Map_Provider.options);
   // Mapbox Outdoors as startup map
   console.log("About to change the BaseMap");
-  var mb = changeBaseMap(mapbox_outdoors_btn.classList, "bm-mb-outdoors");
-  draw_basemap(mb.url, mb.options);
+  //var mb = changeBaseMap(mapbox_outdoors_btn.classList, "bm-mb-outdoors");
+  //draw_basemap(mb.url, mb.options);
   document.getElementById("bm-mb-outdoors").classList.toggle("option_selected");
   //
   // GET THE MARKERS FROM THE DATABASE, AND DRAW THEM (when fetching ends)
