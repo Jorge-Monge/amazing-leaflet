@@ -691,6 +691,7 @@ function populateMapBox_Map_Providers(mt) {
   // from the server. It creates the Mapbox Leaflet layers, almost ready to be
   // inserted on the map (still we need to define the mapbox stiles (variable 'mapbox_style'))
   console.log("Populating MapBox Providers");
+  console.log("MAPBOX_TOKEN:", mt);
   mapBox_Map_Provider = {
     url: "https://api.mapbox.com/styles/v1/mapbox/${mapbox_style}/tiles/{z}/{x}/{y}?access_token=${mt}".replace(
       "${mt}",
