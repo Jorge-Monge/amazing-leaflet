@@ -74,11 +74,7 @@ async function execute(dbQuery) {
   });
   // This function receives a string corresponding to
   // a database query, and returns the result as a JSON
-  console.log("DB Pool created");
-  console.log("USER", DB_USER);
-  console.log("HOST", DB_HOST);
-  console.log("DATABASE", DB_DATABASE);
-  console.log("PASSWORD", DB_PASSWORD);
+
   var res = await pgPool.query(dbQuery);
   await pgPool.end();
   return res;

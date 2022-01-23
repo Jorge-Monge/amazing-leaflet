@@ -21,7 +21,7 @@ exports.handler = async function (event, context, callback) {
   // its value obtained).
 
   response = { mt: MAPBOX_TOKEN };
-  console.log("response:", response);
+
   callback(null, {
     statusCode: 200,
     headers: {
