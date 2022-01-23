@@ -675,7 +675,7 @@ function changeBaseMap(DOMClassList, basemap_id) {
     Mapbox: {
       url: mapBox_Map_Provider.url.replace(
         "${mapbox_style}",
-        mapbox_style[basemap_id]
+        "carto/" + mapbox_style[basemap_id]
       ),
       options: mapBox_Map_Provider.options,
     },
