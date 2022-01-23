@@ -693,7 +693,7 @@ function populateMapBox_Map_Providers(mt) {
   console.log("Populating MapBox Providers");
   console.log("MAPBOX_TOKEN:", mt);
   mapBox_Map_Provider = {
-    url: "https://api.mapbox.com/styles/v1/mapbox/${mapbox_style}/tiles/{z}/{x}/{y}?access_token=${mt}".replace(
+    url: "https://api.mapbox.com/styles/v1/${mapbox_style}/tiles/{z}/{x}/{y}?access_token=${mt}".replace(
       "${mt}",
       mt
     ),
